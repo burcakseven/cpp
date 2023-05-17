@@ -1,10 +1,16 @@
 #include "PhoneBook.hpp"
 
-// void Contact::con(void)
-// {
-//     std::cout << "deneme";
-// }
+Contact::Contact()
+{
+    return;
+}
 
-// Contact::~Contact()
-// {
-// }
+std::string Contact::getName(void)
+{
+    return name;
+}
+
+std::string Contact::getNumber(void)
+{
+    return number;
+}

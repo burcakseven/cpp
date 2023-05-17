@@ -2,7 +2,7 @@ CC = g++
 
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SOURCE = PhoneBook.cpp Contact.cpp
+SOURCE = PhoneBook.cpp Contact.cpp main.cpp
 
 EXECUTABLE = phonebook
 

@@ -1,20 +1,32 @@
 #include "PhoneBook.hpp"
 
-void PhoneBook::phoneBookSetter(std::string str, int index)
+PhoneBook::PhoneBook()
 {
-    phoneBook[index] = str;
-}
-std::string PhoneBook::phoneBookGetter(int index)
-{
-    return phoneBook[index];
+    contactNumber = 0;
 }
 
-int main(int argc, char const *argv[])
+void PhoneBook::addContact(std::string name, std::string number)
 {
-    (void)argc;
-    (void)argv;
-    PhoneBook pb;
-    pb.phoneBookSetter("deneme",1);
-    std::cout << pb.phoneBookGetter(1);
-    return 0;
+    Contact newContact(name, number);
+    phoneBook[contactNumber % 8] = newContact;
+    contactNumber++;
+}
+
+void printScreen(std::string str)
+{
+    if(str.length() > 10)
+        std::cout << str.substr(9) + ".";
+    else
+        std::cout << str;
+}
+
+void PhoneBook::searchContact()
+{
+    for (size_t i = 0; i <= (contactNumber % 8 ); i++)
+    {
+        printScreen(phoneBook->getName());
+        std::cout << "|";
+        printScreen(phoneBook->getNumber());
+        std::cout << std::endl;
+    }
 }
