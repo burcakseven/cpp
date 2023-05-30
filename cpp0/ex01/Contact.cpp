@@ -5,9 +5,19 @@ Contact::Contact()
     return;
 }
 
-std::string Contact::getName(void)
+std::string Contact::getFName(void)
 {
-    return name;
+    return first_name;
+}
+
+std::string Contact::getSName(void)
+{
+    return last_name;
+}
+
+std::string Contact::getNickName(void)
+{
+    return nickname;
 }
 
 std::string Contact::getNumber(void)

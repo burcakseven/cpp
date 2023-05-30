@@ -1,6 +1,6 @@
 #include "PhoneBook.hpp"
 
-void redirector(std::string input, PhoneBook pb)
+void redirector(std::string input, PhoneBook *pb)
 {
     if(!input.compare("EXIT"))
         exit(1);
@@ -10,10 +10,10 @@ void redirector(std::string input, PhoneBook pb)
     {
         if(!input.compare("ADD"))
         {
-            pb.addContact("deneme","denme");
+            pb->addContact();
         }
         else
-            pb.searchContact();
+            pb->searchContact();
     }
 }
 
@@ -23,8 +23,9 @@ int main(void)
     PhoneBook pb;
     while (1)
     {
+        std::cout << "\n>>Please write your choose<<\n>>ADD, SEARCH, EXIT<<" << std::endl;
         std::cin >> input;
-        redirector(input,pb);
+        redirector(input,&pb);
     }
     return 0;
 }

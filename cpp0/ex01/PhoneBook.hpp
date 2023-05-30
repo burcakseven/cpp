@@ -5,16 +5,22 @@
 class Contact
 {
 private:
-    std::string name;
+    std::string first_name;
+    std::string last_name;
+    std::string nickname;
     std::string number;
 public:
     Contact();
-    Contact(std::string name, std::string number)
+    Contact(std::string first_name, std::string last_name, std::string nickname, std::string number)
     {
-        this->name = name;
+        this->first_name = first_name;
+        this->last_name = last_name;
+        this->nickname = nickname;
         this->number = number;
     }
-    std::string getName(void);
+    std::string getFName(void);
+    std::string getSName(void);
+    std::string getNickName(void);
     std::string getNumber(void);
 };
 
@@ -25,7 +31,7 @@ private:
     int     contactNumber;
 public:
     PhoneBook();
-    void addContact(std::string name, std::string phoneNumber);
+    void addContact(void);
     void searchContact(void);
 };
 
