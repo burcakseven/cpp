@@ -24,3 +24,8 @@ std::string Contact::getNumber(void)
 {
     return number;
 }
+
+std::string Contact::getDarkestSecret(void)
+{
+    return darkestSecret;
+}

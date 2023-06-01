@@ -24,7 +24,7 @@ int main(void)
     while (1)
     {
         std::cout << "\n>>Please write your choose<<\n>>ADD, SEARCH, EXIT<<" << std::endl;
-        std::cin >> input;
+        std::getline(std::cin,input);
         redirector(input,&pb);
     }
     return 0;
