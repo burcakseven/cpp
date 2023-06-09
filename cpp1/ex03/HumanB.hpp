@@ -8,6 +8,7 @@ private:
     std::string name;
     Weapon weapon;
 public:
+    HumanB(void);
     HumanB(const std::string& name);
     void attack();
     void setWeapon(const Weapon& wp);

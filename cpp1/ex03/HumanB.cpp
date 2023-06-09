@@ -1,5 +1,10 @@
 #include "HumanB.hpp"
 
+HumanB::HumanB()
+{
+
+}
+
 HumanB::HumanB(const std::string& name)
 {
     this->name = name;

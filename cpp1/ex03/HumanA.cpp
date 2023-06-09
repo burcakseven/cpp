@@ -1,5 +1,10 @@
 #include "HumanA.hpp"
 
+HumanA::HumanA()
+{
+
+}
+
 HumanA::HumanA(const std::string& name,const Weapon& type)
 {
     this->name = name;

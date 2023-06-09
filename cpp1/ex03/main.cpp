@@ -4,14 +4,20 @@
 
 int main()
 {
-    Weapon* wp = new Weapon();
-    wp->setType("denem");
-    HumanA* hm = new HumanA("ay",*wp);
-    hm->attack();
-
-    HumanB *hmb = new HumanB("hm");
-    hmb->attack();
-
-    hmb->setWeapon(*wp);
-    hmb->attack();
+{
+Weapon club = Weapon("crude spiked club");
+HumanA bob("Bob", club);
+bob.attack();
+club.setType("AAA");
+bob.attack();
+}
+{
+Weapon club = Weapon("crude spiked club");
+HumanB jim("Jim");
+jim.setWeapon(club);
+jim.attack();
+club.setType("some other type of club");
+jim.attack();
+}
+return 0;
 }
