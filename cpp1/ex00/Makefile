@@ -2,7 +2,7 @@ CC = c++
 
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SOURCE = Zombie.cpp newZombie.cpp main.cpp
+SOURCE = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 EXECUTABLE = zombie
 
