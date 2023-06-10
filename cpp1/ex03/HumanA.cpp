@@ -1,11 +1,11 @@
 #include "HumanA.hpp"
 
-HumanA::HumanA()
+HumanA::HumanA():weapon(*(new Weapon()))
 {
 
 }
 
-HumanA::HumanA(const std::string& name,const Weapon& type)
+HumanA::HumanA(const std::string& name,const Weapon& type):weapon(*(new Weapon()))
 {
     this->name = name;
     weapon = type;

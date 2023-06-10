@@ -1,11 +1,10 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB()
+HumanB::HumanB() : weapon(*(new Weapon()))
 {
-
 }
 
-HumanB::HumanB(const std::string& name)
+HumanB::HumanB(const std::string& name) :weapon(*(new Weapon()))
 {
     this->name = name;
 }
