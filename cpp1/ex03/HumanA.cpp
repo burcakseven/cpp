@@ -1,14 +1,7 @@
 #include "HumanA.hpp"
 
-HumanA::HumanA():weapon(*(new Weapon()))
+HumanA::HumanA(const std::string& name,Weapon& type):name(name),weapon(type)
 {
-
-}
-
-HumanA::HumanA(const std::string& name,const Weapon& type):weapon(*(new Weapon()))
-{
-    this->name = name;
-    weapon = type;
 }
 
 void HumanA::attack()
