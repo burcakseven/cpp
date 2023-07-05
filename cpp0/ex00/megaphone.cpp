@@ -23,6 +23,7 @@ int main(int argc, char **argv)
         if(*(argv+1) != '\0')
             std::cout << " ";
     }
+    std::cout << std::endl;
     
     return 0;
 }

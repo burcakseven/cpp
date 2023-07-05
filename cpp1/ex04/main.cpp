@@ -1,16 +1,6 @@
 #include <iostream>
 #include <fstream>
 
-void takeParameters(std::string &filename, std::string &s1, std::string &s2)
-{
-    std::cout << "Enter filename:"<<std::endl;
-    std::getline(std::cin, filename);
-    std::cout << "Enter string to replace: ";
-    std::getline(std::cin, s1);
-    std::cout << "Enter replacement string: ";
-    std::getline(std::cin, s2);
-}
-
 void replaceString(std::ifstream& ifs, std::ofstream& ofs, const std::string& s1, const std::string& s2)
 {
     std::string line;
@@ -40,10 +30,17 @@ void openAndReplace(const std::string &filename,const std::string &s1,const std:
     replaceString(ifs,ofs,s1,s2);
 }
 
-int main()
+int main(int ac, char **av)
 {
+    if(ac != 4)
+    {
+        std::cout << "Invalid argument count." << std::endl;
+        exit(1);
+    }
     std::string filename, s1, s2;
-    takeParameters(filename,s1,s2);
-    openAndReplace(filename,s1,s2);
-
+    filename = av[1];
+    s1 = av[2];
+    s2 = av[3];
+    openAndReplace(filename, s1, s2);
+    return 0;
 }

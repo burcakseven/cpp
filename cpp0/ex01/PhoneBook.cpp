@@ -4,7 +4,6 @@ PhoneBook::PhoneBook()
 {
     contactNumber = 0;
 }
-
 Contact getNewContactInfo()
 {
     std::string fn;
