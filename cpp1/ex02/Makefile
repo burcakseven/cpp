@@ -4,7 +4,7 @@ CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 SOURCE = main.cpp
 
-EXECUTABLE = zombie
+EXECUTABLE = brain
 
 all: $(EXECUTABLE)
 

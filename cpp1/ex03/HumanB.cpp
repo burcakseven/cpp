@@ -2,6 +2,7 @@
 
 HumanB::HumanB(const std::string& name) : name(name)
 {
+    this->weapon = NULL;
 }
 
 void HumanB::setWeapon(Weapon& wp)
@@ -11,8 +12,8 @@ void HumanB::setWeapon(Weapon& wp)
 
 void HumanB::attack()
 {
-    if(!weapon)
-        std::cout << name << " doesn't have weapon" << std::endl;
-    else
+    if(weapon)
         std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+    else
+        std::cout << name << " doesn't have weapon" << std::endl;
 }
