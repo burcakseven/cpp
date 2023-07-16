@@ -4,7 +4,7 @@ CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 SOURCE = main.cpp Fixed.cpp
 
-EXECUTABLE = replace
+EXECUTABLE = fixed
 
 all: $(EXECUTABLE)
 
