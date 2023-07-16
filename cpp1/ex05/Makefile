@@ -2,9 +2,9 @@ CC = c++
 
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SOURCE = main.cpp
+SOURCE = main.cpp Harl.cpp
 
-EXECUTABLE = brain
+EXECUTABLE = harl
 
 all: $(EXECUTABLE)
 
@@ -13,3 +13,5 @@ $(EXECUTABLE): $(SOURCE)
 
 clean:
 	rm -f $(EXECUTABLE)
+
+re: clean all
