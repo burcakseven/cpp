@@ -9,7 +9,7 @@ protected:
 public:
     Animal();
     ~Animal();
-    void makeSound();
+    virtual void makeSound();
     std::string getType();
 };
 

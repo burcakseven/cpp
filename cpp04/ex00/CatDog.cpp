@@ -7,7 +7,12 @@ Cat::Cat()
 
 Cat::~Cat()
 {
-    std::cout << type + " CATOLDUMU" << std::endl;
+
+}
+
+void Cat::makeSound()
+{
+    std::cout << "Meeeeeooooowwwww" << std::endl;
 }
 
 Dog::Dog()
@@ -17,5 +22,10 @@ Dog::Dog()
 
 Dog::~Dog()
 {
-    std::cout << type + " DogOLDUMU" << std::endl;
+
+}
+
+void Dog::makeSound()
+{
+    std::cout << "Woof! Woof" << std::endl;
 }

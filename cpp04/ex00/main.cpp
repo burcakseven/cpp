@@ -3,7 +3,10 @@
 int main()
 {
     Cat *cat = new Cat();
+    Animal *cati = new Dog();
+    Animal *ani = new Animal();
+    cati->makeSound();
     cat->makeSound();
-    delete cat;
+    ani->makeSound();
     return 0;
 }

@@ -7,6 +7,7 @@ class Cat : public Animal
 public:
     Cat(/* args */);
     ~Cat();
+    void makeSound();
 };
 
 class Dog : public Animal
@@ -14,7 +15,7 @@ class Dog : public Animal
 public:
     Dog(/* args */);
     ~Dog();
+    void makeSound();
 };
-
 
 #endif
