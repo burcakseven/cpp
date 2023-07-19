@@ -1,4 +1,6 @@
-#include "CatDog.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -8,5 +10,11 @@ int main()
     cati->makeSound();
     cat->makeSound();
     ani->makeSound();
+    delete cat;
+    delete cati;
+    delete ani;
+    WrongAnimal *wr = new WrongCat();
+    wr->makeSound();
+    delete wr;
     return 0;
 }

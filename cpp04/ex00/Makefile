@@ -2,7 +2,7 @@ CC = c++
 
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SOURCE = main.cpp Animal.cpp CatDog.cpp
+SOURCE = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 EXECUTABLE = Animal
 
