@@ -1,17 +1,26 @@
-CC = c++
+NAME = Bureaucrat
 
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+SRCS = Bureaucrat.cpp main.cpp
 
-SOURCE = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+OBJS = $(SRCS:%.cpp= %.o)
 
-EXECUTABLE = Animal
+CFAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(EXECUTABLE)
+RM = rm -rf
 
-$(EXECUTABLE): $(SOURCE)
-	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(SOURCE)
+C++ = c++
 
-clean:
-	rm -f $(EXECUTABLE)
+all : $(NAME)
 
-re: clean all
+$(NAME) : $(OBJS)
+	$(C++) $(CFLAGS) $(SRCS) -o $(NAME) -std=c++98
+
+clean :
+	$(RM) $(OBJS)
+
+fclean : clean
+	$(RM) $(NAME)
+
+re : fclean all
+
+.PHONY = all clean fclean re
